@@ -1,7 +1,8 @@
-package me.restapi.rest.arquitetura.service;
+package me.restapi.rest.arquitetura.controllers;
 
 import io.swagger.annotations.ApiOperation;
 import me.restapi.rest.arquitetura.interfaces.IDocument;
+import me.restapi.rest.arquitetura.services.GenericService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,12 +19,14 @@ public abstract class GenericControllerImpl<T extends IDocument, S extends Gener
 
     @Override
     @GetMapping
+    @ApiOperation(value = "Lista todos os documentos")
     public ResponseEntity<List<T>> listAll() {
         return ResponseEntity.ok(service.listAll());
     }
 
     @Override
     @GetMapping(path = "/{id}")
+    @ApiOperation(value = "Busca um documento por id")
     public ResponseEntity<T> findById(@PathVariable(name = "id") Long id) {
         Optional<T> optional = service.findById(id);
 
@@ -36,6 +39,7 @@ public abstract class GenericControllerImpl<T extends IDocument, S extends Gener
 
     @Override
     @PostMapping
+    @ApiOperation(value = "Insere o documento")
     public ResponseEntity<T> insert(@RequestBody T entity) {
         return ResponseEntity.ok(service.insert(entity));
     }
@@ -49,12 +53,14 @@ public abstract class GenericControllerImpl<T extends IDocument, S extends Gener
 
     @Override
     @PutMapping(path = "/{id}")
+    @ApiOperation(value = "Atualiza o documento")
     public ResponseEntity<T> update(@PathVariable(name = "id") Long id, @RequestBody  T entity) {
         return ResponseEntity.ok(service.update(entity));
     }
 
     @Override
     @DeleteMapping(path = "/{id}")
+    @ApiOperation(value = "Apaga o documento")
     public ResponseEntity<Integer> delete(@PathVariable(name = "id") Long id) {
         service.delete(id);
         return ResponseEntity.ok(1);

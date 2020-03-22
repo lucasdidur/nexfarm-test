@@ -1,6 +1,6 @@
-package me.restapi.rest.service;
+package me.restapi.rest.services;
 
-import me.restapi.rest.arquitetura.service.GenericServiceImpl;
+import me.restapi.rest.arquitetura.services.GenericServiceImpl;
 import me.restapi.rest.documents.ProdutoRestricoesVenda;
 import me.restapi.rest.repositories.ProdutoRestricoesVendaRepository;
 import org.springframework.beans.factory.annotation.Autowired;

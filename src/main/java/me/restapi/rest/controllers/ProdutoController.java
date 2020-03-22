@@ -1,9 +1,10 @@
 package me.restapi.rest.controllers;
 
-import me.restapi.rest.arquitetura.service.GenericControllerImpl;
+import io.swagger.annotations.ApiOperation;
+import me.restapi.rest.arquitetura.controllers.GenericControllerImpl;
 import me.restapi.rest.documents.Produto;
-import me.restapi.rest.response.ProdutoSearchResponse;
-import me.restapi.rest.service.ProdutoService;
+import me.restapi.rest.responses.ProdutoSearchResponse;
+import me.restapi.rest.services.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +21,7 @@ public class ProdutoController extends GenericControllerImpl<Produto, ProdutoSer
     }
 
     @PostMapping(path = "/search")
+    @ApiOperation(value = "Faz uma busca de produtos com o o preço de venda")
     public ResponseEntity<List<ProdutoSearchResponse>> procurar(@RequestHeader("clientId") Integer clientId, @RequestParam(name = "name") String nomeProduto){
            return ResponseEntity.ok(service.findProducts(clientId, nomeProduto));
     }

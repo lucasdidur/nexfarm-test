@@ -1,12 +1,12 @@
-package me.restapi.rest.service;
+package me.restapi.rest.services;
 
-import me.restapi.rest.arquitetura.service.GenericServiceImpl;
+import me.restapi.rest.arquitetura.services.GenericServiceImpl;
 import me.restapi.rest.documents.Produto;
 import me.restapi.rest.documents.Taxa;
 import me.restapi.rest.repositories.ProdutoRepository;
 import me.restapi.rest.repositories.ProdutoRestricoesVendaRepository;
 import me.restapi.rest.repositories.TaxaRepository;
-import me.restapi.rest.response.ProdutoSearchResponse;
+import me.restapi.rest.responses.ProdutoSearchResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

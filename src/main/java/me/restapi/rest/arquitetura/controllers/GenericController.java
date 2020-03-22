@@ -1,4 +1,4 @@
-package me.restapi.rest.arquitetura.service;
+package me.restapi.rest.arquitetura.controllers;
 
 import org.springframework.http.ResponseEntity;
 

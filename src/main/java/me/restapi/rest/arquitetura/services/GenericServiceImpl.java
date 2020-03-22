@@ -1,4 +1,4 @@
-package me.restapi.rest.arquitetura.service;
+package me.restapi.rest.arquitetura.services;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 

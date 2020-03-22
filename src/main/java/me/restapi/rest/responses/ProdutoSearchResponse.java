@@ -1,4 +1,4 @@
-package me.restapi.rest.response;
+package me.restapi.rest.responses;
 
 public class ProdutoSearchResponse {
     Long productId;

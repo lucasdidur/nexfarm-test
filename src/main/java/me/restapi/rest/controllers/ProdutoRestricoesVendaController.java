@@ -1,8 +1,8 @@
 package me.restapi.rest.controllers;
 
-import me.restapi.rest.arquitetura.service.GenericControllerImpl;
+import me.restapi.rest.arquitetura.controllers.GenericControllerImpl;
 import me.restapi.rest.documents.ProdutoRestricoesVenda;
-import me.restapi.rest.service.ProdutoRestricoesVendaService;
+import me.restapi.rest.services.ProdutoRestricoesVendaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
