@@ -12,7 +12,7 @@ import javax.validation.constraints.NotEmpty;
 public class Cliente extends IDocument {
 
     @Indexed
-    private Long idCliente;
+    private Integer idCliente;
 
     @NotEmpty
     @Field(name = "Nome")
@@ -23,11 +23,11 @@ public class Cliente extends IDocument {
     @Field(name = "CNPJ")
     private String cnpj;
 
-    public Long getIdCliente() {
+    public Integer getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(Long idCliente) {
+    public void setIdCliente(Integer idCliente) {
         this.idCliente = idCliente;
     }
 
@@ -45,5 +45,14 @@ public class Cliente extends IDocument {
 
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "idCliente=" + idCliente +
+                ", nome='" + nome + '\'' +
+                ", cnpj='" + cnpj + '\'' +
+                '}';
     }
 }

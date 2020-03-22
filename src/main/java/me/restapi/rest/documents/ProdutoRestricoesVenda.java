@@ -28,4 +28,12 @@ public class ProdutoRestricoesVenda extends IDocument {
     public void setIdProduto(Integer idProduto) {
         this.idProduto = idProduto;
     }
+
+    @Override
+    public String toString() {
+        return "ProdutoRestricoesVenda{" +
+                "idCliente=" + idCliente +
+                ", idProduto=" + idProduto +
+                '}';
+    }
 }

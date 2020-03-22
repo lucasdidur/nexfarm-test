@@ -9,19 +9,19 @@ import org.springframework.data.mongodb.core.mapping.Field;
 public class Produto extends IDocument {
 
     @Indexed
-    private Long productId;
+    private Integer productId;
 
     @Field(name = "name")
     private String nome;
 
     @Field(name = "price")
-        private Double preco;
+    private Double preco;
 
-    public Long getProductId() {
+    public Integer getProductId() {
         return productId;
     }
 
-    public void setProductId(Long productId) {
+    public void setProductId(Integer productId) {
         this.productId = productId;
     }
 
@@ -39,5 +39,14 @@ public class Produto extends IDocument {
 
     public void setPreco(Double preco) {
         this.preco = preco;
+    }
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+                "productId=" + productId +
+                ", nome='" + nome + '\'' +
+                ", preco=" + preco +
+                '}';
     }
 }

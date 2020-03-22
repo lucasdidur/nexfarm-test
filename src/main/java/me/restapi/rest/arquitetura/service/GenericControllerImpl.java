@@ -10,7 +10,7 @@ import java.util.Optional;
 
 public abstract class GenericControllerImpl<T extends IDocument, S extends GenericService<Long, T>> implements GenericController<Long, T> {
 
-    private S service;
+    protected S service;
 
     public GenericControllerImpl(S service) {
         this.service = service;

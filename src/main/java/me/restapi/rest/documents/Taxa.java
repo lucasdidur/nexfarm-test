@@ -40,4 +40,14 @@ public class Taxa extends IDocument {
     public void setPorcentagem(Integer porcentagem) {
         this.porcentagem = porcentagem;
     }
+
+
+    @Override
+    public String toString() {
+        return "Taxa{" +
+                "clientId=" + clientId +
+                ", tipo='" + tipo + '\'' +
+                ", porcentagem=" + porcentagem +
+                '}';
+    }
 }

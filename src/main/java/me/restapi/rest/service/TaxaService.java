@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TaxaService extends GenericServiceImpl<Taxa> {
+public class TaxaService extends GenericServiceImpl<Taxa, TaxaRepository> {
 
     @Autowired
     public TaxaService(TaxaRepository repository) {

@@ -7,12 +7,11 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 
-public class GenericServiceImpl<T> implements GenericService<Long, T> {
+public class GenericServiceImpl<T, R extends MongoRepository<T, Long>> implements GenericService<Long, T> {
 
+    protected R repository;
 
-    private MongoRepository<T, Long> repository;
-
-    public GenericServiceImpl(MongoRepository<T, Long> repository) {
+    public GenericServiceImpl(R repository) {
         this.repository = repository;
     }
 
