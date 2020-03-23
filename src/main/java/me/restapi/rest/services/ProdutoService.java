@@ -28,6 +28,12 @@ public class ProdutoService extends GenericServiceImpl<Produto, ProdutoRepositor
         super(repository);
     }
 
+    /**
+     * Faz a busca dos produtos, das restrições e das taxas do cliente informado
+     * @param clientId do cliente a ser buscado
+     * @param nomeProduto do produto a ser buscado
+     * @return lista de produtos com suas taxas calculadas
+     */
     public List<ProdutoSearchResponse> findProducts(Integer clientId, String nomeProduto){
 
         List<Produto> resticoes = produtoRestricoesVendaRepository.findAllByIdCliente(clientId);
